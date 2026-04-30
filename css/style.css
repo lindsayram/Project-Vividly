@@ -1,16 +1,11 @@
 /* Fonts */
 
-@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
-
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Shrikhand&display=swap');
 
 /* Général */
 
 *{
     margin:0;
-    font-family: var(--primary-font);
     scroll-behavior: smooth;
 }
 
@@ -25,8 +20,59 @@
     --button-font: "Inter", sans-serif;
 }
 
-/* Header */
+h1, footer h2{
+    font-family: var(--title-font);
+    font-size: 30px;
+    font-weight: 400;
+    font-style: italic;
+}
 
+a{
+    text-decoration: none;
+    color: var(--black);
+}
+
+/* Mobile first (320px à 767px)*/
+
+/* Header */
+header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 20px 0 20px 50px;
+}
 /* Main */
 
 /* Footer */
+
+footer{
+    background-color: var(--black);
+    padding: 10px;
+    
+    h2{
+        font-family: var(--title-font);
+        font-size: 30px;
+        font-weight: 400;
+        font-style: italic;
+        color: var(--white);
+    }
+
+    >div{
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        margin-top: 15px;
+    
+        a{
+            color: var(--white);
+            font-family: var(--primary-font);
+            font-style: light;
+            font-size: 15px;
+            font-weight: 300;
+
+            &:hover{
+                color: var(--orange);
+            }
+        }
+    }
+}
