@@ -58,6 +58,7 @@ header{
 
 /* Main */
 
+/* section #find */
 #find{
     background-color: var(--yellow);
     text-align: center;
@@ -97,6 +98,105 @@ header{
             border-style: none;
         }
           
+    }
+}
+
+/* section #how-it-works */
+#how-it-works{
+    padding: 25px;
+
+    ul{
+        list-style: none;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        
+        
+
+        li{
+            box-shadow: 0px 3px 5px 1px rgba(0, 0, 0, 0.25);
+            padding: 10px;
+            border-radius: 5px;
+            position:relative;
+        }
+            
+        #num1::before{
+            content:'1';
+            position: absolute;
+            left: -20px;
+            top: 5px;
+            background-color: var(--orange);
+            color: var(--white);
+            border-radius: 100px;
+            padding: 5px 10px;
+        }
+
+        #num2::before{
+            content:'2';
+            position: absolute;
+            left: -20px;
+            top: 5px;
+            background-color: var(--orange);
+            color: var(--white);
+            border-radius: 100px;
+            padding: 5px 10px;
+        }
+        
+        #num3::before{
+            content:'3';
+            position: absolute;
+            left: -20px;
+            top: 5px;
+            background-color: var(--orange);
+            color: var(--white);
+            border-radius: 100px;
+            padding: 5px 10px;
+        } 
+        
+    }
+}
+
+/* section #choose */
+#choose{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    background-color: var(--yellow);
+    color: var(--black);
+    padding: 25px;
+
+    .cards{
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+
+        .card{
+            background-color: var(--white);
+            border-radius: 15px;
+            padding-bottom: 10px;
+
+            img{
+                width: 100%;
+                object-fit: cover;
+                border-radius: 15px 15px 0 0;
+            }
+
+            .content{
+                padding: 5px;
+
+                .recommand{
+                    display: flex;
+                    border-top: 1.5px solid var(--orange);
+                    align-items: center;
+                    justify-content: space-between;
+                    margin-top: 10px;
+
+                    p{
+                        margin-top: 7px;}
+                }
+            }
+        }
     }
 }
 
