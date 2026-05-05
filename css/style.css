@@ -182,18 +182,20 @@ header{
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    
+    background-color: var(--yellow);
     color: var(--black);
     padding: 25px 15px;
 
     div{
-        background-color: var(--yellow);
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
 
         .cards{
             display: flex;
-            flex-direction: column;
+            flex-wrap: wrap;
             gap: 25px;
-
+            /* A faire les likes */
             .card{
                 background-color: var(--white);
                 border-radius: 15px;
@@ -253,7 +255,7 @@ header{
                     }
                 }
             }
-            
+
             .new::before{
                     content: 'New !';
                     position: absolute;
@@ -337,6 +339,7 @@ footer{
 /* Format desktop (1024px jusqu'à 1440px) */
 
 @media screen and (min-width: 1025px){
+    /* à faire le responsive header */
     header{
         a{
             padding-left: 20px;
@@ -370,8 +373,24 @@ footer{
     }
 
     #choose{
-        max-width: 960px;
-        margin: auto;
+        .choose-your-pro{
+            max-width: 960px;
+            margin: auto;
+
+            .cards{
+                flex-direction: row;
+            }
+        }
+    }
+
+    footer{
+        display: flex;
+        justify-content: center;
+        gap: 25px;
+        
+        div{
+            flex-direction: row;
+        }
     }
 }
     
