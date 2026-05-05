@@ -51,16 +51,18 @@ a{
     color: var(--black);
 }
 
-button{background: linear-gradient(var(--orange), var(--yellow));
-        border-radius: 15px;
-        width: fit-content;
-        margin-top: 25px;
-        padding:7px 12px;
-        font-family: var(--button-font);
-        font-size: 12px;
-        font-weight: 600;
-        box-shadow: 0px 5px 7px 1px rgba(0, 0, 0, 0.25);
-        border-style: none;
+button{
+    background: linear-gradient(var(--orange), var(--yellow));
+    border-radius: 15px;
+    width: fit-content;
+    margin-top: 25px;
+    padding:7px 12px;
+    font-family: var(--button-font);
+    font-size: 12px;
+    font-weight: 600;
+    box-shadow: 0px 5px 7px 1px rgba(0, 0, 0, 0.25);
+    border-style: none;
+    cursor: pointer;
     }
 
 /* Mobile first (320px à 767px)*/
@@ -186,7 +188,7 @@ header{
     color: var(--black);
     padding: 25px 15px;
 
-    div{
+    .choose-your-pro{
         display: flex;
         flex-direction: column;
         gap: 25px;
@@ -195,7 +197,7 @@ header{
             display: flex;
             flex-wrap: wrap;
             gap: 25px;
-            /* A faire les likes */
+            
             .card{
                 background-color: var(--white);
                 border-radius: 15px;
@@ -218,8 +220,8 @@ header{
                     .recommand{
                         display: flex;
                         border-top: 1.5px solid var(--orange);
-                        align-items: center;
-                        justify-content: space-between;
+                        align-items: flex-end;
+                        gap: 25px;
                         margin-top: 10px;
 
                         p{
@@ -229,28 +231,23 @@ header{
                         .pouce{
                             position: relative;
                             cursor:pointer;
-                            margin: 10px 26px 0 0;
+                            
 
-                            img{
+                            input{
+                                display:none;
+                            }
+
+                            .icon{
+                                display: inline-block;
+                                background-image: url("../img/thumbs-up-regular.svg");
+                                background-size: cover;
+                                width: 17px;
                                 height: 16px;
-                                object-fit: cover;
                             }
 
-                            .unclick{
-                                display: none;
+                            input:checked + .icon{
+                                background-image: url("../img/thumbs-up-solid.svg");
                             }
-
-                        .on{
-                                display: none;
-                            }
-                        
-                        .input:checked ~ .on{
-                                display:inline;
-                        }
-
-                        .input:checked ~ .off{
-                                display: inline;
-                        } 
                         }                   
                     }
                 }
