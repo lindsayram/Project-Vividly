@@ -34,6 +34,12 @@ h2{
     margin-bottom: 15px;
 }
 
+h3{
+    font-family: var(--primary-font);
+    font-size: 18px;
+    font-weight: bold;
+}
+
 p{
     font-family: var(--primary-font);
     font-size: 15px;
@@ -119,6 +125,10 @@ header{
             padding: 10px;
             border-radius: 5px;
             position:relative;
+            font-family: var(--primary-font);
+            font-size: 16px;
+            font-weight: 500;
+
         }
             
         #num1::before{
@@ -128,7 +138,7 @@ header{
             top: 5px;
             background-color: var(--orange);
             color: var(--white);
-            border-radius: 100px;
+            border-radius: 50%;
             padding: 5px 10px;
         }
 
@@ -139,7 +149,7 @@ header{
             top: 5px;
             background-color: var(--orange);
             color: var(--white);
-            border-radius: 100px;
+            border-radius: 50%;
             padding: 5px 10px;
         }
         
@@ -150,7 +160,7 @@ header{
             top: 5px;
             background-color: var(--orange);
             color: var(--white);
-            border-radius: 100px;
+            border-radius: 50%;
             padding: 5px 10px;
         } 
         
@@ -164,7 +174,7 @@ header{
     flex-wrap: wrap;
     background-color: var(--yellow);
     color: var(--black);
-    padding: 25px;
+    padding: 25px 15px;
 
     .cards{
         display: flex;
@@ -175,9 +185,11 @@ header{
             background-color: var(--white);
             border-radius: 15px;
             padding-bottom: 10px;
+            position: relative;
 
             img{
                 width: 100%;
+                height: 140px;
                 object-fit: cover;
                 border-radius: 15px 15px 0 0;
             }
@@ -193,13 +205,55 @@ header{
                     margin-top: 10px;
 
                     p{
-                        margin-top: 7px;}
+                        margin-top: 7px;
+                    }
+
+                    .pouce{
+                        position: relative;
+                        cursor:pointer;
+                        margin: 10px 26px 0 0;
+
+                        img{
+                            height: 16px;
+                            object-fit: cover;
+                        }
+
+                        .unclick{
+                            display: none;
+                        }
+
+                       .on{
+                            display: none;
+                        }
+                    
+                       .input:checked ~ .on{
+                            display:inline;
+                       }
+
+                       .input:checked ~ .off{
+                            display: inline;
+                       } 
+                    }                   
                 }
             }
-        }
+
+            .new::before{
+                    content: 'New !';
+                    position: absolute;
+                    color: var(--white);
+                    background-color: var(--orange);
+                    font-family: var(--title-font);
+                    font-size: 16px;
+                    font-style: italic;
+                    font-weight: 400;
+                    transform: rotate(-30deg);
+                    padding: 3px 15px;
+                    top: 9px;
+                    left: -5px;
+            }
+    }
     }
 }
-
 /* Footer */
 
 footer{
