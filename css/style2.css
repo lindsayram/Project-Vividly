@@ -51,17 +51,19 @@ a{
     color: var(--black);
 }
 
-button{background: linear-gradient(var(--orange), var(--yellow));
-        border-radius: 15px;
-        width: fit-content;
-        margin-top: 25px;
-        padding:7px 12px;
-        font-family: var(--button-font);
-        font-size: 12px;
-        font-weight: 600;
-        box-shadow: 0px 5px 7px 1px rgba(0, 0, 0, 0.25);
-        border-style: none;
-    }
+button{
+    /* effet de zoom au hover */
+    background: linear-gradient(var(--orange), var(--yellow));
+    border-radius: 15px;
+    width: fit-content;
+    margin-top: 25px;
+    padding:7px 12px;
+    font-family: var(--button-font);
+    font-size: 12px;
+    font-weight: 600;
+    box-shadow: 0px 5px 7px 1px rgba(0, 0, 0, 0.25);
+    border-style: none;
+}
 
 /* Mobile first (320px à 767px)*/
 
@@ -83,6 +85,53 @@ header{
 }
 
 /* Main */
+.card{
+    img{
+        height: 300px;
+        object-fit: cover;
+        width: 100%;
+    }
+
+    h2{
+        text-align: center;
+        padding-top: 10px;
+    }
+
+    .recommand{
+        border-top: 2px solid var(--orange);
+        margin: 10px;
+        padding-top: 5px;
+        display: flex;
+        justify-content: space-between;
+        padding: 15px 5px;
+    
+
+        .pouce{
+            cursor: pointer;
+
+            input{
+                display: none;
+            }
+
+            .icon{
+                background-image: url("../img/thumbs-up-regular.svg");
+                display: inline-block;
+                width: 20px;
+                height: 20px;
+            }
+
+            input:checked + .icon{
+                background-image: url("../img/thumbs-up-solid.svg");
+            }
+        }
+    }
+}
+
+#who-are-we{
+    border-bottom: 2px solid var(--orange);
+    border-top: 2px solid var(--orange);
+    padding: 30px 15px;
+}
 
 
 /* Footer */
