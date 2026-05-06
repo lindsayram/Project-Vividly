@@ -79,13 +79,13 @@ button{
 
 header{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     margin: 17px;
 
-    a{
+    /* a{
         margin: auto;
-    }
+    } */
 
     .desktop{
         display: none;
@@ -93,7 +93,7 @@ header{
 }
 
 /* Main */
-.card{
+#card{
     img{
         height: 300px;
         object-fit: cover;
@@ -106,7 +106,7 @@ header{
     }
 
     .recommand{
-        border-top: 2px solid var(--orange);
+        border-top: 1px solid var(--orange);
         margin: 10px;
         padding-top: 5px;
         display: flex;
@@ -136,13 +136,13 @@ header{
 }
 
 #who-are-we{
-    border-bottom: 2px solid var(--orange);
-    border-top: 2px solid var(--orange);
+    border-bottom: 1px solid var(--orange);
+    border-top: 1px solid var(--orange);
     padding: 31px 15px;
 }
 
 #maps{
-    border-bottom: 2px solid var(--orange);
+    border-bottom: 1px solid var(--orange);
     padding: 30px 15px;
 
     iframe{
@@ -155,13 +155,15 @@ header{
 #contact-us{
     padding: 30px 15px;
 
-    article{
-        display: flex;
-        gap: 5px;
-        margin-top: 10px;
+    .contact{
+        article{
+            display: flex;
+            gap: 5px;
+            margin-top: 15px;
 
-        i{
-            color: var(--orange);
+            i{
+                color: var(--orange);
+            }
         }
     }
 
@@ -171,7 +173,7 @@ header{
         justify-content: center;
 
         h3{
-            margin: 15px 0;
+            margin: 18px 0;
         }
 
         ul{
@@ -179,7 +181,6 @@ header{
             list-style: none;
             justify-content: space-around;
             padding: 0;
-            margin: 10px 0;
         }
     }
 
@@ -190,13 +191,13 @@ header{
         margin: 20px 0;
 
         input{
-            border: 2px solid var(--orange);
+            border: 1px solid var(--orange);
             padding: 7px;
             cursor: pointer;
         }
 
         textarea{
-            border: 2px solid var(--orange);
+            border: 1px solid var(--orange);
             padding: 5px;
             font-family: var(--button-font);
             font-size: 13.2px;
@@ -260,4 +261,56 @@ footer{
             }
         }
     }
+}
+
+/* Format tablette (768px à 1024px)*/
+
+@media screen and (min-width:768px) {
+    header{
+        nav{
+
+            i{
+                margin-left: 30px;
+            }
+        };
+    }
+
+    main{
+        #card{
+            .content{
+                display: flex;
+                justify-content: space-between;
+                padding: 0 15px;
+
+                .recommand{
+                    border-style: none;
+                    padding: 0;
+                    align-items: center;
+                    gap: 20px;
+                    } 
+                }
+            }
+
+        #who-are-we{
+            h2{
+                text-align: center;
+            }
+        }
+
+        #maps{
+            h2{
+                text-align: center;
+            }
+        }
+        #contact-us{
+            h2, h3{
+                text-align: center;
+            }
+
+            .contact{
+                display: flex;
+                justify-content: space-around;
+            }
+        }
+        }
 }
