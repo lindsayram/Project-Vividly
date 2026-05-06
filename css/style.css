@@ -195,6 +195,7 @@ header{
 
         .cards{
             display: flex;
+            flex-direction: column;
             flex-wrap: wrap;
             gap: 25px;
             
@@ -219,20 +220,15 @@ header{
 
                     .recommand{
                         display: flex;
-                        border-top: 1.5px solid var(--orange);
+                        border-top: 2px solid var(--orange);
                         align-items: flex-end;
+                        justify-content: space-between;
                         gap: 25px;
                         margin-top: 10px;
 
-                        p{
-                            margin-top: 7px;
-                        }
-
                         .pouce{
-                            position: relative;
                             cursor:pointer;
                             
-
                             input{
                                 display:none;
                             }
@@ -243,6 +239,7 @@ header{
                                 background-size: cover;
                                 width: 17px;
                                 height: 16px;
+                                margin: 8px 6px 0 0;
                             }
 
                             input:checked + .icon{
@@ -325,10 +322,16 @@ footer{
     }
 
     #choose{
+
+        .choose-your-pro{
         
-        .cards{
-            flex-direction: row;
-            flex-wrap: wrap;
+            .cards{
+                flex-direction: row;
+
+                .card{
+                    flex: 1 0 48%;
+                }
+            }
         }
     }
 }
