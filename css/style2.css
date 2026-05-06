@@ -83,10 +83,6 @@ header{
     align-items: center;
     margin: 17px;
 
-    /* a{
-        margin: auto;
-    } */
-
     .desktop{
         display: none;
     }
@@ -313,4 +309,60 @@ footer{
             }
         }
         }
+}
+
+/* Format desktop (dès 1025px) */
+
+@media screen and (min-width:1024px) {
+    header{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        text-align: center;
+        h1{
+            padding-left: 20px;
+        }
+
+        nav{
+            display: flex;
+
+            ul{
+                padding: 0;
+                list-style: none;
+
+                .desktop{
+                    display:flex;
+                    gap: 25px;
+                    
+                    a{padding: 0;
+                    }
+                }   
+            }
+        }
+
+        .hidden{
+            display: none;
+        }
+    }
+
+    main{
+        #card {
+            max-width: 960px;
+            margin: auto;
+        }
+
+        #who-are-we, #maps, #contact-us{
+            max-width: 990px;
+            margin: auto;
+        }
+    }
+
+    footer{
+        display: flex;
+        justify-content: center;
+        gap: 25px;
+        
+        div{
+            flex-direction: row;
+        }
+    }
 }
