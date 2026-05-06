@@ -71,7 +71,40 @@ button{
     }
 }
 
+.loader-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color:var(--yellow);
+}
 
+.loader {
+  width: 150px;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background: radial-gradient(closest-corner at -100%,var(--orange) 90%, var(--white) 100%);
+  animation: spin 1s linear infinite;
+}
+
+.inner-circle {
+  width: 80%;
+  height: 80%;
+  background-color: var(--yellow);
+  border-radius: 50%;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0);
+  }
+  to{
+    transform: rotate(360deg);
+  }
+}
 
 /* Mobile first (320px à 767px)*/
 
@@ -157,6 +190,11 @@ header{
             gap: 5px;
             margin-top: 15px;
 
+            &:hover{
+                color: var(--yellow);
+                cursor: pointer;
+            }
+
             i{
                 color: var(--orange);
             }
@@ -177,6 +215,10 @@ header{
             list-style: none;
             justify-content: space-around;
             padding: 0;
+
+            a:hover{
+                color: var(--yellow);
+            }
         }
     }
 
@@ -334,8 +376,12 @@ footer{
                     gap: 25px;
                     
                     a{padding: 0;
+
+                        &:hover{
+                            color: var(--yellow);
+                        }
                     }
-                }   
+                } 
             }
         }
 
