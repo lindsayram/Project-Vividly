@@ -65,6 +65,58 @@ button{
     cursor: pointer;
     }
 
+.loader-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    background-color:var(--yellow);
+    position:fixed;
+    animation: off 1.1s linear forwards;
+    z-index: 999;
+}
+
+.loader {
+  width: 150px;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background: radial-gradient(closest-corner at -100%,var(--orange) 90%, var(--white) 100%);
+  animation: spin 1s linear forwards;
+}
+
+.inner-circle {
+  width: 80%;
+  height: 80%;
+  background-color: var(--yellow);
+  border-radius: 50%;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0);
+  }
+  to{
+    transform: rotate(360deg);
+  }
+
+  100%{
+    opacity: var(--white) 70% ;
+  }
+}
+
+@keyframes off{
+    from {
+        display: flex;
+    }
+    to{
+        display: none;
+    }
+}
+
 /* Mobile first (320px à 767px)*/
 
 /* Header */
